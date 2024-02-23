@@ -29,9 +29,8 @@ function calculate() {
     document.getElementById('result').innerText = resultMessage;
 }
 
-// Заполнение сроков вклада в зависимости от выбранного типа вклада
-document.getElementById('depositType').addEventListener('change', function() {
-    var depositType = this.value;
+function populateDepositTerm() {
+    var depositType = document.getElementById('depositType').value;
     var depositTermSelect = document.getElementById('depositTerm');
     depositTermSelect.innerHTML = '';
 
@@ -46,4 +45,7 @@ document.getElementById('depositType').addEventListener('change', function() {
         option.textContent = term;
         depositTermSelect.appendChild(option);
     });
-});
+}
+
+// Вызов функции populateDepositTerm() при загрузке страницы
+window.onload = populateDepositTerm;

@@ -21,7 +21,7 @@
 			}
         
 			.container {
-				max-width: 1200px;
+				max-width: 1200px auto;
 				margin: 20px auto;
 				padding: 0 20px;
 				display: flex;
@@ -100,7 +100,8 @@
         
 			@media screen and (max-width: 768px) {
 				.container, .containeres {
-					padding: 0 10px;
+					flex-direction: column;
+   					align-items: center;
 				}
 				.swiper-button-prev, .swiper-button-next {
 					margin-left: 10px;
@@ -127,13 +128,13 @@
     
 		<div class="container">
 			<div class="image-container">
-				<img src="../Resources/Starsleft.png" alt="Left Image">
+			  <img id="Starsleft" src="../Resources/Starsleft.png"  alt="Left Image">
 			</div>
 			<h1>Ключевые <br> особенности</h1>
 			<div class="image-container">
-				<img src="../Resources/Starsright.png" alt="Right Image">
+			  <img id="Starsright" src="../Resources/Starsright.png"  alt="Right Image">
 			</div>
-		</div>
+		  </div>
 		<!-- Контейнер для слайдера -->
 		<div class="swiper-container">
 			<div class="swiper-wrapper">

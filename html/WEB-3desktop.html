@@ -45,27 +45,29 @@
 	<body>
 		<div class="container">
 			<h1>Калькулятор вкладов для банка</h1>
-			<form id="calculatorForm">
-				<div class="form-group">
-					<label for="depositType">Вид вклада:</label>
-					<select id="depositType" name="depositType">
-						<option value="popolnyaemy">Пополняемый</option>
-						<option value="srochny">Срочный</option>
-					</select>
-				</div>
-				<div class="form-group">
-					<label for="depositTerm">Срок вклада:</label>
-					<select id="depositTerm" name="depositTerm">
-						<!-- Options will be added dynamically using JavaScript -->
-					</select>
-				</div>
-				<div class="form-group">
-					<label for="depositAmount">Сумма вклада:</label>
-					<input type="number" id="depositAmount" name="depositAmount" min="0" required>
-				</div>
-				<button type="button" onclick="calculate()">Рассчитать</button>
-			</form>
-			<div id="result"></div>
+			<div style="display: flex;">
+				<form id="calculatorForm" style="flex: 1;">
+					<div class="form-group">
+						<label for="depositType">Вид вклада:</label>
+						<select id="depositType" name="depositType">
+							<option value="popolnyaemy">Пополняемый</option>
+							<option value="srochny">Срочный</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label for="depositTerm">Срок вклада:</label>
+						<select id="depositTerm" name="depositTerm">
+							<!-- Options will be added dynamically using JavaScript -->
+						</select>
+					</div>
+					<div class="form-group">
+						<label for="depositAmount">Сумма вклада:</label>
+						<input type="number" id="depositAmount" name="depositAmount" min="0" required>
+					</div>
+					<button type="button" onclick="calculate()">Рассчитать</button>
+				</form>
+				<div id="result" style="flex: 1; padding: 20px; border: 1px solid #ccc; border-radius: 5px; margin-left: 20px;"></div>
+			</div>
 		</div>
 
 		<script src="../Calculation.js"></script>
