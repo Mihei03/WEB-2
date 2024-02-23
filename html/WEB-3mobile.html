@@ -3,12 +3,9 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		
 		<title>Сайт со слайдером изображений по геншину</title>
-		
 		<link rel="icon" href="Resources/NSTU.ico" type="image/x-icon">
-		<link rel="shortcut icon" href="Resources/NSTU.ico" type="image/x-icon">
-		
+		<link rel="shortcut icon" href="..Resources/NSTU.ico" type="image/x-icon">
 		<!-- Подключаем CSS Swiper -->
 		<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 		
@@ -17,7 +14,7 @@
 				font-family: Times New Roman;
 				margin: 0;
 				padding: 0;
-				background: linear-gradient(to bottom, #FFFFFF 60%, #000000 40%);
+				background-color: #FFFFFF;
 			}
         
 			.container {
@@ -30,11 +27,11 @@
 				flex-wrap: wrap; 
 			}
         
-			.image-container {
-				flex-basis: calc(50% - 20px);
-				max-width: 400px;
-				margin-bottom: 20px;
-			}
+				.image-container {
+					flex-basis: calc(50% - 20px);
+					max-width: 400px;
+					margin-bottom: 20px;
+				}
 			
 			.image-container img {
 				width: 100%;
@@ -55,7 +52,6 @@
 			h3 {
 				text-align: center;
 				margin-bottom: 5px;
-				color: grey;
 			}
         
 			.swiper-container {
@@ -107,19 +103,6 @@
 					margin-right: 10px;
 				}
 			}
-			
-			#content a {
-            display: block;
-            margin-bottom: 10px;
-			font-size: 20px;
-			}
-			
-			li {
-			font-size: 20px;
-			line-height: 2.5;
-			list-style-type: none;
-			}
-		
 		</style>
 	</head>
 	
@@ -146,7 +129,6 @@
 			<div class="swiper-button-prev"></div>
 			<div class="swiper-button-next"></div>
 		</div>
-		
 		<div class="containeres">
 			<h2>Боевая система стихий...</h2>
 			<p>Сражайтесь с помощью семи элементов.</p>
@@ -155,24 +137,10 @@
 			<h2>Путешествие с командой мечты...</h2>
 			<p>Обретайте на Тейвате надёжных соратников, каждый из которых обладает своей уникальной личностью, историей и способностями.</p>
 		</div>
-		
 		<img src="Resources/genshin.png" alt="Genshin" style="display: block; margin: 0 auto; margin-bottom: 10px;">
-		
-		<li style="text-align: center;" style="font-size: 20px;" ><a href="https://genshin.hoyoverse.com/ru/company/privacy">Политика конфиденциальности</a></li>
-		<li style="text-align: center;" ><a href="https://genshin.hoyoverse.com/ru/company/terms">Условия обслуживания</a></li>
-		<li style="text-align: center;" ><a href="https://www.hoyoverse.com/ru-ru/about-us?utm_source=genshin&utm_medium=footer">О разработчике</a></li>
-		<li style="text-align: center;" ><a href="genshincs_ru@hoyoverse.com">Служба поддержки</a></li>
-		
 		<div class="container">
 			<h3>"PlayStation Family Mark," "PS5 logo" and "PS4 logo" are registered trademarks or trademarks of Sony Interactive Entertainment Inc. Epic, Epic Games, Epic Games Store, the Epic Games Store logo, and Epic Online Services are trademarks and/or registered trademarks of Epic Games. All other trademarks are the property of their respective owners.</h3>
 		</div>
-		
-		<img src="Resources/Hoyoverse.png" width="300" alt="Hoyoverse" style="display: block; margin: 0 auto; margin-bottom: 10px;">
-		
-		<div class="containeres">
-			<h3>Copyright © COGNOSPHERE. All Rights Reserved.</h3>
-		</div>
-		
 		<!-- Подключаем JS Swiper -->
 		<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 		<script>
