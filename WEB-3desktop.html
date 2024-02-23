@@ -3,156 +3,73 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Сайт со слайдером изображений по геншину</title>
+		
+		<title>Калькулятор вкладов</title>
+		
 		<link rel="icon" href="Resources/NSTU.ico" type="image/x-icon">
 		<link rel="shortcut icon" href="Resources/NSTU.ico" type="image/x-icon">
-		<!-- Подключаем CSS Swiper -->
-		<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+			
+		<link rel="stylesheet" href="styles.css">
 		
 		<style>
-			body {
-				font-family: Times New Roman;
-				margin: 0;
-				padding: 0;
-				background-color: #FFFFFF;
-			}
-        
 			.container {
-				max-width: 1200px;
-				margin: 20px auto;
-				padding: 0 20px;
-				display: flex;
-				justify-content: space-between;
-				align-items: center;
-				flex-wrap: wrap; 
-			}
-        
-				.image-container {
-					flex-basis: calc(50% - 20px);
-					max-width: 400px;
-					margin-bottom: 20px;
+				max-width: 600px;
+				margin: 0 auto;
+				padding: 20px;
+				border: 1px solid #ccc;
+				border-radius: 5px;
 				}
-			
-			.image-container img {
-				width: 100%;
-				height: auto;
-				border-radius: 8px;
-			}
-			
-			h1 {
-				text-align: center;
+
+			.form-group {
 				margin-bottom: 15px;
 			}
-			
-			h2, p {
-				text-align: left;
-				margin-bottom: 15px;
-			}
-			
-			h3 {
-				text-align: center;
-				margin-bottom: 5px;
-			}
-        
-			.swiper-container {
-				width: 100%;
-				max-width: 1200px;
-				height: 400px;
-				border-radius: 8px;
-				overflow: hidden;
-				margin: 20px auto;
-			}
-        
-			.swiper-slide img {
-				width: 100%;
-				height: 100%;
-				object-fit: contain;
-			}
-        
-			.swiper-button-prev, .swiper-button-next {
+
+			button {
+				padding: 10px 20px;
+				background-color: #007bff;
 				color: #fff;
-				font-size: 18px;
-				background-color: rgba(0, 0, 0, 0.5);
-				width: 40px;
-				height: 40px;
-				border-radius: 50%;
-				margin-top: -140px;
-				z-index: 10;
+				border: none;
+				border-radius: 5px;
+				cursor: pointer;
 			}
-			
-			.swiper-button-prev {
-				left: 10px;
+
+			button:hover {
+				background-color: #0056b3;
 			}
-			
-			.swiper-button-next {
-				right: 10px;
-			}
-			
-			.containeres {
-				max-width: 1200px;
-				margin: 10px auto;
-				padding: 0 20px;
-			}
-        
-			@media screen and (max-width: 768px) {
-				.container, .containeres {
-					padding: 0 10px;
-				}
-				.swiper-button-prev, .swiper-button-next {
-					margin-left: 10px;
-					margin-right: 10px;
-				}
+
+			#result {
+				margin-top: 20px;
 			}
 		</style>
+		
 	</head>
 	
 	<body>
-    
 		<div class="container">
-			<div class="image-container">
-				<img src="Resources/Starsleft.png" alt="Left Image">
-			</div>
-			<h1>Ключевые <br> особенности</h1>
-			<div class="image-container">
-				<img src="Resources/Starsright.png" alt="Right Image">
-			</div>
+			<h1>Калькулятор вкладов для банка</h1>
+			<form id="calculatorForm">
+				<div class="form-group">
+					<label for="depositType">Вид вклада:</label>
+					<select id="depositType" name="depositType">
+						<option value="popolnyaemy">Пополняемый</option>
+						<option value="srochny">Срочный</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label for="depositTerm">Срок вклада:</label>
+					<select id="depositTerm" name="depositTerm">
+						<!-- Options will be added dynamically using JavaScript -->
+					</select>
+				</div>
+				<div class="form-group">
+					<label for="depositAmount">Сумма вклада:</label>
+					<input type="number" id="depositAmount" name="depositAmount" min="0" required>
+				</div>
+				<button type="button" onclick="calculate()">Рассчитать</button>
+			</form>
+			<div id="result"></div>
 		</div>
-		<!-- Контейнер для слайдера -->
-		<div class="swiper-container">
-			<div class="swiper-wrapper">
-				<!-- Слайды -->
-				<div class="swiper-slide"><img src="Resources/Kazuha.png" alt="Kazuha"> </div>
-				<div class="swiper-slide"><img src="Resources/Inazuma.png" alt="Inazuma"></div>
-				<div class="swiper-slide"><img src="Resources/HuTao.png" alt="HuTao"></div>
-			</div>
-			<!-- Навигация для слайдера -->
-			<div class="swiper-button-prev"></div>
-			<div class="swiper-button-next"></div>
-		</div>
-		<div class="containeres">
-			<h2>Боевая система стихий...</h2>
-			<p>Сражайтесь с помощью семи элементов.</p>
-			<h2>Огромный открытый мир...</h2>
-			<p>Поднимайтесь на горы, переплывайте реки и парите над миром.</p>
-			<h2>Путешествие с командой мечты...</h2>
-			<p>Обретайте на Тейвате надёжных соратников, каждый из которых обладает своей уникальной личностью, историей и способностями.</p>
-		</div>
-		<img src="Resources/genshin.png" alt="Genshin" style="display: block; margin: 0 auto; margin-bottom: 10px;">
-		<div class="container">
-			<h3>"PlayStation Family Mark," "PS5 logo" and "PS4 logo" are registered trademarks or trademarks of Sony Interactive Entertainment Inc. Epic, Epic Games, Epic Games Store, the Epic Games Store logo, and Epic Online Services are trademarks and/or registered trademarks of Epic Games. All other trademarks are the property of their respective owners.</h3>
-		</div>
-		<!-- Подключаем JS Swiper -->
-		<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-		<script>
-			// Инициализация слайдера Swiper
-			var swiper = new Swiper('.swiper-container', {
-				// Опции слайдера
-				loop: true, // Бесконечный цикл
-				navigation: {
-					nextEl: '.swiper-button-next', // Кнопка "Next"
-					prevEl: '.swiper-button-prev', // Кнопка "Prev"
-				},
-			});
-		</script>
+
+		<script src="script.js"></script>
 	</body>
 </html>
