@@ -3,8 +3,8 @@ function calculate() {
     var depositTerm = document.getElementById('depositTerm').value;
     var depositAmount = parseFloat(document.getElementById('depositAmount').value);
 
-    if (isNaN(depositAmount) || depositAmount <= 0) {
-        alert('Пожалуйста, введите корректную сумму вклада.');
+    if (isNaN(depositAmount) || depositAmount <= 0 || depositAmount > 1000000000) {
+        alert('Пожалуйста, введите корректную сумму вклада до 1 миллиарда.');
         return;
     }
 

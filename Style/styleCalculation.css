@@ -23,16 +23,28 @@ button:hover {
     background-color: #0056b3;
 }
 
-#result-mobile,
 #result-pc {
     padding: 15px; /* Увеличение внутреннего отступа */
     border: 2px solid #007bff; /* Изменение стиля границы */
     border-radius: 10px; /* Увеличение радиуса скругления */
-    margin-top: 10px; /* Добавление отступа сверху */
-    margin-bottom: 10px; /* Добавление отступа снизу */
+    margin-top: 5px; /* Добавление отступа сверху */
     box-sizing: border-box; /* Учесть толщину границы и отступов в общую ширину и высоту элемента */
-    width: 60%; /* Установка фиксированной ширины */
-    max-width: 60%; /* Установка максимальной ширины */
+    width: 250px; /* Установка фиксированной ширины */
+    height: 150px; 
+    max-width: none;
+    max-height: none;
+}
+
+#result-mobile {
+    padding: 15px;
+    border: 2px solid #007bff;
+    border-radius: 10px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    min-width: 100%;
+    min-height: 100%;
+    display: inline-block; /* Изменение отображения на inline-block */
+    max-width: 100%; /* Максимальная ширина 100% от родительского контейнера */
 }
 
 @media screen and (min-width: 768px) {
