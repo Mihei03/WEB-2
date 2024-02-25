@@ -6,7 +6,7 @@ body {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1200px auto;
     margin: 20px auto;
     padding: 0 20px;
     display: flex;
@@ -16,8 +16,8 @@ body {
 }
 
 .image-container {
-    flex-basis: 100%; /* Изменено с calc(50% - 20px) на 100% для полной ширины на мобильных устройствах */
-    max-width: 100%; /* Изменено с 400px на 100% для полной ширины на мобильных устройствах */
+    flex-basis: calc(50% - 20px);
+    max-width: 400px;
     margin-bottom: 20px;
 }
 
@@ -32,15 +32,27 @@ h1 {
     margin-bottom: 15px;
 }
 
-h2, h3, p {
-    text-align: center; /* Изменено с left на center для центрирования на мобильных устройствах */
+h2 {
+    text-align: left;
     margin-bottom: 15px;
+}
+
+p {
+    text-align: left;
+    margin-bottom: 15px;
+    text-indent: 30px;
+}
+
+h3 {
+    text-align: center;
+    margin-bottom: 5px;
+    color: grey;
 }
 
 .swiper-container {
     width: 100%;
     max-width: 1200px;
-    height: 300px; /* Изменено с 400px на 300px для уменьшения высоты слайдера на мобильных устройствах */
+    height: 400px;
     border-radius: 8px;
     overflow: hidden;
     margin: 20px auto;
@@ -59,7 +71,7 @@ h2, h3, p {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    margin-top: -70px; /* Изменено с -140px на -70px для лучшей видимости на мобильных устройствах */
+    margin-top: -140px;
     z-index: 10;
 }
 
@@ -99,3 +111,21 @@ li {
     line-height: 2.5;
     list-style-type: none;
 }
+
+@media  screen and (min-width: 768px) {
+    .header-pc {
+      display: block
+    }
+    .header-mobile {
+      display: none
+    }
+  }
+  
+  @media  screen and (max-width: 768px) {
+    .header-pc {
+      display: none
+    }
+    .header-mobile {
+      display: block
+    }
+  }
