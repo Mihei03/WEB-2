@@ -30,9 +30,15 @@ h1 {
     margin-bottom: 10px; /* Изменено с 15px на 10px для уменьшения отступа на мобильных устройствах */
 }
 
-h2, h3, p {
+h2, p {
     text-align: center; /* Изменено с left на center для центрирования на мобильных устройствах */
     margin-bottom: 10px; /* Изменено с 15px на 10px для уменьшения отступа на мобильных устройствах */
+}
+
+h3 {
+    text-align: center;
+    margin-bottom: 5px;
+    color: grey;
 }
 
 .swiper-container {
