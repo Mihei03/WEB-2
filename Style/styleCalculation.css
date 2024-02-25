@@ -23,6 +23,32 @@ button:hover {
     background-color: #0056b3;
 }
 
-#result {
-    margin-top: 20px;
+#result-mobile,
+#result-pc {
+    padding: 15px; /* Увеличение внутреннего отступа */
+    border: 2px solid #007bff; /* Изменение стиля границы */
+    border-radius: 10px; /* Увеличение радиуса скругления */
+    margin-top: 10px; /* Добавление отступа сверху */
+    margin-bottom: 10px; /* Добавление отступа снизу */
+    box-sizing: border-box; /* Учесть толщину границы и отступов в общую ширину и высоту элемента */
+    width: 60%; /* Установка фиксированной ширины */
+    max-width: 60%; /* Установка максимальной ширины */
+}
+
+@media screen and (min-width: 768px) {
+    .header-pc {
+        display: block;
+    }
+    .header-mobile {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header-pc {
+        display: none;
+    }
+    .header-mobile {
+        display: block;
+    }
 }
