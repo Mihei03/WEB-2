@@ -3,121 +3,42 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
 		<title>Сайт со слайдером изображений по геншину</title>
-		<link rel="icon" href="Resources/NSTU.ico" type="image/x-icon">
-		<link rel="shortcut icon" href="Resources/NSTU.ico" type="image/x-icon">
+		
+		<link rel="icon" href="../Resources/NSTU.ico" type="image/x-icon">
+		<link rel="shortcut icon" href="../Resources/NSTU.ico" type="image/x-icon">
+		
 		<!-- Подключаем CSS Swiper -->
 		<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-		<style>
-			body {
-				font-family: Times New Roman;
-				margin: 0;
-				padding: 0;
-				background-color: #FFFFFF;
-			}
-			
-			.container {
-				max-width: 100%;
-				margin: 20px;
-				padding: 0 20px;
-			}
-			
-			.image-container img {
-				width: 100%;
-				border-radius: 8px;
-			}
-			
-			h1 {
-				text-align: center;
-				margin-bottom: 15px;
-			}
-			
-			h2, p {
-				text-align: left;
-				margin-bottom: 15px;
-			}
-			
-			h3 {
-				text-align: center;
-				margin-bottom: 5px;
-			}
-			
-			.swiper-container {
-				width: 100%;
-				max-width: 100%;
-				height: 300px;
-				border-radius: 8px;
-				overflow: hidden;
-				margin: 20px 0;
-			}
-			
-			.swiper-slide img {
-				width: 100%;
-				height: 100%;
-				object-fit: contain;
-			}
-			
-			.swiper-button-prev, .swiper-button-next {
-				color: #fff;
-				font-size: 18px;
-				background-color: rgba(0, 0, 0, 0.5);
-				width: 40px;
-				height: 40px;
-				border-radius: 50%;
-				z-index: 10;
-			}
-			
-			.swiper-button-prev {
-				left: 10px;
-			}
-			
-			.swiper-button-next {
-				right: 10px;
-			}
-			
-			.containeres {
-				max-width: 100%;
-				margin: 10px;
-				padding: 0 20px;
-			}
-			
-			@media screen and (max-width: 768px) {
-				.container {
-					padding: 0 10px;
-				}
-				.swiper-container {
-					height: 200px;
-				}
-				.swiper-button-prev, .swiper-button-next {
-					margin-left: 10px;
-					margin-right: 10px;
-				}
-			}
-		</style>
+		<link rel="stylesheet" href="../Style/styleSwiperMobile.css">
+
 	</head>
 	
 	<body>
+    
 		<div class="container">
+			<div class="image-container">
+			  <img id="Starsleft" src="../Resources/Starsleft.png"  alt="Left Image">
+			</div>
 			<h1>Ключевые <br> особенности</h1>
 			<div class="image-container">
-				<img src="Resources/Starsleft.png" alt="Left Image">
+			  <img id="Starsright" src="../Resources/Starsright.png"  alt="Right Image">
 			</div>
-			<div class="image-container">
-				<img src="Resources/Starsright.png" alt="Right Image">
-			</div>
-		</div>
+		  </div>
 		<!-- Контейнер для слайдера -->
 		<div class="swiper-container">
 			<div class="swiper-wrapper">
 				<!-- Слайды -->
-				<div class="swiper-slide"><img src="Resources/Kazuha.png" alt="Kazuha"> </div>
-				<div class="swiper-slide"><img src="Resources/Inazuma.png" alt="Inazuma"></div>
-				<div class="swiper-slide"><img src="Resources/HuTao.png" alt="HuTao"></div>
+				<div class="swiper-slide"><img src="../Resources/Kazuha.png" alt="Kazuha"> </div>
+				<div class="swiper-slide"><img src="../Resources/Inazuma.png" alt="Inazuma"></div>
+				<div class="swiper-slide"><img src="../Resources/HuTao.png" alt="HuTao"></div>
 			</div>
 			<!-- Навигация для слайдера -->
 			<div class="swiper-button-prev"></div>
 			<div class="swiper-button-next"></div>
 		</div>
+		
 		<div class="containeres">
 			<h2>Боевая система стихий...</h2>
 			<p>Сражайтесь с помощью семи элементов.</p>
@@ -126,22 +47,26 @@
 			<h2>Путешествие с командой мечты...</h2>
 			<p>Обретайте на Тейвате надёжных соратников, каждый из которых обладает своей уникальной личностью, историей и способностями.</p>
 		</div>
-		<img src="Resources/genshin.png" alt="Genshin" style="display: block; margin: 0 auto; margin-bottom: 10px;">
+		
+		<img src="../Resources/genshin.png" alt="Genshin" style="display: block; margin: 0 auto; margin-bottom: 10px;">
+		
+		<li style="text-align: center;" style="font-size: 20px;" ><a href="https://genshin.hoyoverse.com/ru/company/privacy">Политика конфиденциальности</a></li>
+		<li style="text-align: center;" ><a href="https://genshin.hoyoverse.com/ru/company/terms">Условия обслуживания</a></li>
+		<li style="text-align: center;" ><a href="https://www.hoyoverse.com/ru-ru/about-us?utm_source=genshin&utm_medium=footer">О разработчике</a></li>
+		<li style="text-align: center;" ><a href="genshincs_ru@hoyoverse.com">Служба поддержки</a></li>
+		
 		<div class="container">
 			<h3>"PlayStation Family Mark," "PS5 logo" and "PS4 logo" are registered trademarks or trademarks of Sony Interactive Entertainment Inc. Epic, Epic Games, Epic Games Store, the Epic Games Store logo, and Epic Online Services are trademarks and/or registered trademarks of Epic Games. All other trademarks are the property of their respective owners.</h3>
 		</div>
+		
+		<img src="../Resources/Hoyoverse.png" width="300" alt="Hoyoverse" style="display: block; margin: 0 auto; margin-bottom: 10px;">
+		
+		<div class="containeres">
+			<h3>Copyright © COGNOSPHERE. All Rights Reserved.</h3>
+		</div>
+		
 		<!-- Подключаем JS Swiper -->
-		<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-		<script>
-			// Инициализация слайдера Swiper
-			var swiper = new Swiper('.swiper-container', {
-				// Опции слайдера
-				loop: true, // Бесконечный цикл
-				navigation: {
-					nextEl: '.swiper-button-next', // Кнопка "Next"
-					prevEl: '.swiper-button-prev', // Кнопка "Prev"
-				},
-			});
-		</script>
+		<script src="../JS/Swiper.js"></script>
+		
 	</body>
 </html>
