@@ -20,7 +20,7 @@
 				<form id="calculatorForm" style="flex: 1;">
 					<div class="form-group">
 						<label for="depositType">Вид вклада:</label>
-						<select id="depositType" name="depositType">
+						<select id="depositType" name="depositType" onchange="populateDepositTerm()">
 							<option value="пополняемый">Пополняемый</option>
 							<option value="срочный">Срочный</option>
 						</select>
