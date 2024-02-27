@@ -26,7 +26,20 @@ function calculate() {
     };
 
     var interestRate = interestRates[depositType][depositTerm];
-    var finalAmount = depositAmount * (1 + interestRate);
+    
+    // Рассчет процента
+    var daysInYear = 360; // Принимаем 30 дней в месяце
+    var termInDays = 0;
+    
+    if (depositTerm.includes('месяц')) {
+        termInDays = parseInt(depositTerm) * 30;
+    } else if (depositTerm.includes('год')) {
+        termInDays = parseInt(depositTerm) * 360;
+    }
+    
+    var interest = (interestRate / daysInYear) * termInDays;
+    
+    var finalAmount = depositAmount * (1 + interest);
 
     var resultMessage = `Вы выбрали ${depositType} вклад на срок ${depositTerm} со ставкой ${interestRate * 100}%. 
     Ваша сумма вклада составляет ${depositAmount}. Через указанный срок вы получите ${finalAmount.toFixed(2)}.`;
